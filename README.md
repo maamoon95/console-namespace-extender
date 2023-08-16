@@ -24,6 +24,13 @@ Extend the console with namespaces for better-organized logging.
 
 `console-namespace-extender` provides an elegant way to structure your logging by automatically enhancing your console methods with namespace capabilities. This package simplifies debugging and tracing by letting developers quickly identify where the logs are originating from.
 
+### Try it on CodeSandbox
+
+Want to see `console-namespace-extender` in action without setting it up locally? Click on the button below to explore a live example on CodeSandbox!
+
+[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/restless-microservice-ssy7h8?file=/index.js:1,1)
+
+
 ## Installation
 
 ```bash
