@@ -1,0 +1,51 @@
+{
+  "name": "console-namespace-extender",
+  "version": "1.0.0",
+  "description": "Extend the console with namespaces for better-organized logging.",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build-webpack": "webpack",
+    "build-tsc-esm": "tsc -p tsconfig.esm.json",
+    "build-tsc-commonjs": "tsc -p tsconfig.commonjs.json",
+    "build": "npm run build-tsc-esm && npm run build-tsc-commonjs && npm run build-webpack",
+    "prepublishOnly": "npm run build",
+    "preversion": "npm run build",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags",
+    "pretest": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "lint-staged": "eslint ./dist --fix && git add -A dist",
+    "commitlint": "commitlint --edit",
+    "commit": "cz"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@types/node": "^20.5.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.47.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.0",
+    "semistandard": "^17.0.0",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
