@@ -54,3 +54,4 @@ class LoggerExtended {
 }
 LoggerExtended.startCustomizedLog();
 export default LoggerExtended;
+// # sourceMappingURL=index.js.map

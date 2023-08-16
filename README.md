@@ -1,8 +1,23 @@
 
 # Console Namespace Extender
 
-[![npm version](https://badge.fury.io/js/console-namespace-extender.svg)](https://badge.fury.io/js/console-namespace-extender) <!-- Replace this with the actual URL to your npm package -->
-
+<!-- BADGES -->
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/npm/v/console-namespace-extender)
+![TypeScript](https://img.shields.io/badge/TypeScript-Built%20in-succes)
+![JavaScript](https://img.shields.io/badge/JavaScript-Built%20in-succes)
+![NodeJS](https://img.shields.io/badge/NodeJS-Compatible-succes)
+![ReactJS](https://img.shields.io/badge/ReactJS-Compatible-succes)
+![AngularJS](https://img.shields.io/badge/AngularJS-Compatible-succes)
+![VueJS](https://img.shields.io/badge/VueJS-Compatible-succes)
+![ReactNative](https://img.shields.io/badge/ReactNative-Compatible-succes)
+![Ionic](https://img.shields.io/badge/Ionic-Compatible-succes)
+![Cordova](https://img.shields.io/badge/Cordova-Compatible-succes)
+![Ember.js](https://img.shields.io/badge/Ember.js-Compatible-succes)
+![NextJS](https://img.shields.io/badge/Next-Compatible-succes)
+![Nest.js](https://img.shields.io/badge/Nest.js-Compatible-succes)
+![vite](https://img.shields.io/badge/vite-Compatible-succes)
+<!-- END BADGES -->
 Extend the console with namespaces for better-organized logging.
 
 ## Description
