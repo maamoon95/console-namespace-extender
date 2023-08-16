@@ -54,6 +54,6 @@ class LoggerExtended {
     LoggerExtended._instance = undefined;
   }
 }
-LoggerExtended.startCustomizedLog();
-exports.default = LoggerExtended;
+const instance = LoggerExtended.startCustomizedLog();
+exports.default = instance;
 // # sourceMappingURL=index.js.map

@@ -6,4 +6,5 @@ declare class LoggerExtended {
     private constructor();
     static resetConsole(): void;
 }
-export default LoggerExtended;
+declare const instance: LoggerExtended;
+export default instance;

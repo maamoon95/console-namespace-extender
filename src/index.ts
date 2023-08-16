@@ -60,5 +60,5 @@ class LoggerExtended {
       LoggerExtended._instance = undefined;
     }
   }
-  LoggerExtended.startCustomizedLog();
-  export default LoggerExtended;
+  const instance =  LoggerExtended.startCustomizedLog();
+  export default instance;
