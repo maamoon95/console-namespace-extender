@@ -1,11 +1,30 @@
 {
   "compilerOptions": {
-    "target": "ES6", // Node.js 12+ supports ES6
-    "module": "ES6",
-    "outDir": "./dist",
-    "strict": true,
-    "esModuleInterop": true
+    "target": "es6",                  // target ES6
+    "module": "commonjs",             // use commonjs module system (suitable for Node.js)
+    "esModuleInterop": true,          // enable better interop between ES Modules and commonjs
+    "moduleResolution": "node",       // module resolution strategy
+    "strict": true,                   // enable all strict type-checking options
+    "jsx": "react",                   // if you use React with JSX
+    "outDir": "./dist",               // output directory for compiled files
+    "rootDir": "./src",               // root directory of source files
+    "removeComments": true,           // remove comments from the output files
+    "declaration": true,              // generate corresponding .d.ts file
+    "sourceMap": true,                // generate corresponding .map file
+    "skipLibCheck": true,             // skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // disallow inconsistently-cased references to the same file
+    "lib": [                          // include libraries for both browser and Node.js
+      "dom",
+      "es6",
+      "es2017",
+      "esnext.asynciterable"
+    ]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [                        // files to be included in the compilation
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [                        // files to be excluded from the compilation
+    "node_modules"
+  ]
 }

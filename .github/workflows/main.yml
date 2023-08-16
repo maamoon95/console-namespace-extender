@@ -1,0 +1,46 @@
+name: Build and Publish
+
+on:
+  push:
+    branches:
+      - main
+      - beta
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # or your preferred version
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Bump version (main branch)
+      if: github.ref == 'refs/heads/main'
+      run: npx standard-version
+
+    - name: Bump version (beta branch)
+      if: github.ref == 'refs/heads/beta'
+      run: npx standard-version --prerelease beta
+
+
+    - name: Push Changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+
+    - name: Build
+      run: npm run build
+
+    - name: Publish to npm
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

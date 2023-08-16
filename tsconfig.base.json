@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "strict": true,
+      "esModuleInterop": true,
+      "sourceMap": true                // generate corresponding .map file
+
+      // ... other shared configurations
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+  }
